@@ -1,0 +1,147 @@
+sample_size: 50000
+test_size: 0.1
+n_splits: 10
+random_state: 0
+features_excluded: ['bed', 'body_type', 'cabin', 'engine_cylinders', 'engine_type', 'franchise_make', 'fuel_type', 'make_name', 'transmission', 'transmission_display', 'wheel_system', 'wheel_system_display', 'year', 'listing_color', 'city_fuel_economy', 'highway_fuel_economy', 'engine_displacement', 'fuel_tank_volume', 'horsepower', 'power', 'torque', 'wheelbase', 'length', 'car_age', 'mileage', 'height', 'width', 'back_legroom', 'front_legroom']
+
+Linear Regression_SimpleImputer():
+	model: LinearRegression()
+	scores:
+		Average fit_time: 9.598 s
+		Average score_time: 0.704 s
+		Average test_r2: 0.496
+		Average train_r2: 0.472
+		Average test_neg_mean_absolute_error: -7858.406
+		Average train_neg_mean_absolute_error: -7928.645
+		Average test_neg_root_mean_squared_error: -12641.398
+		Average train_neg_root_mean_squared_error: -13198.399
+		Average test_neg_mean_absolute_percentage_error: -0.362
+		Average train_neg_mean_absolute_percentage_error: -0.365
+	Total duration: 81.974 s
+
+Linear Regression_SimpleImputer(strategy='median'):
+	model: LinearRegression()
+	scores:
+		Average fit_time: 9.479 s
+		Average score_time: 0.866 s
+		Average test_r2: 0.503
+		Average train_r2: 0.479
+		Average test_neg_mean_absolute_error: -7786.662
+		Average train_neg_mean_absolute_error: -7855.915
+		Average test_neg_root_mean_squared_error: -12560.081
+		Average train_neg_root_mean_squared_error: -13119.762
+		Average test_neg_mean_absolute_percentage_error: -0.362
+		Average train_neg_mean_absolute_percentage_error: -0.365
+	Total duration: 78.762 s
+
+Decision Tree_SimpleImputer():
+	model: DecisionTreeRegressor()
+	scores:
+		Average fit_time: 10.634 s
+		Average score_time: 0.669 s
+		Average test_r2: 0.818
+		Average train_r2: 1.000
+		Average test_neg_mean_absolute_error: -3903.357
+		Average train_neg_mean_absolute_error: -1.844
+		Average test_neg_root_mean_squared_error: -7554.958
+		Average train_neg_root_mean_squared_error: -75.640
+		Average test_neg_mean_absolute_percentage_error: -0.157
+		Average train_neg_mean_absolute_percentage_error: -0.000
+	Total duration: 83.250 s
+
+Decision Tree_SimpleImputer(strategy='median'):
+	model: DecisionTreeRegressor()
+	scores:
+		Average fit_time: 8.878 s
+		Average score_time: 0.803 s
+		Average test_r2: 0.806
+		Average train_r2: 1.000
+		Average test_neg_mean_absolute_error: -3933.332
+		Average train_neg_mean_absolute_error: -1.844
+		Average test_neg_root_mean_squared_error: -7794.475
+		Average train_neg_root_mean_squared_error: -75.640
+		Average test_neg_mean_absolute_percentage_error: -0.159
+		Average train_neg_mean_absolute_percentage_error: -0.000
+	Total duration: 86.591 s
+
+Random Forest_SimpleImputer():
+	model: RandomForestRegressor(random_state=0)
+	scores:
+		Average fit_time: 92.852 s
+		Average score_time: 1.339 s
+		Average test_r2: 0.917
+		Average train_r2: 0.986
+		Average test_neg_mean_absolute_error: -2861.667
+		Average train_neg_mean_absolute_error: -1072.476
+		Average test_neg_root_mean_squared_error: -5128.755
+		Average train_neg_root_mean_squared_error: -2130.682
+		Average test_neg_mean_absolute_percentage_error: -0.118
+		Average train_neg_mean_absolute_percentage_error: -0.044
+	Total duration: 520.141 s
+
+Random Forest_SimpleImputer(strategy='median'):
+	model: RandomForestRegressor(random_state=0)
+	scores:
+		Average fit_time: 92.942 s
+		Average score_time: 1.252 s
+		Average test_r2: 0.917
+		Average train_r2: 0.986
+		Average test_neg_mean_absolute_error: -2856.858
+		Average train_neg_mean_absolute_error: -1071.133
+		Average test_neg_root_mean_squared_error: -5105.192
+		Average train_neg_root_mean_squared_error: -2121.378
+		Average test_neg_mean_absolute_percentage_error: -0.119
+		Average train_neg_mean_absolute_percentage_error: -0.045
+	Total duration: 519.027 s
+
+XGBoost_SimpleImputer():
+	model: XGBRegressor(base_score=None, booster=None, callbacks=None,
+             colsample_bylevel=None, colsample_bynode=None,
+             colsample_bytree=None, early_stopping_rounds=None,
+             enable_categorical=False, eval_metric=None, feature_types=None,
+             gamma=None, gpu_id=None, grow_policy=None, importance_type=None,
+             interaction_constraints=None, learning_rate=None, max_bin=None,
+             max_cat_threshold=None, max_cat_to_onehot=None,
+             max_delta_step=None, max_depth=None, max_leaves=None,
+             min_child_weight=None, missing=nan, monotone_constraints=None,
+             n_estimators=100, n_jobs=None, num_parallel_tree=None,
+             predictor=None, random_state=0, ...)
+	scores:
+		Average fit_time: 29.369 s
+		Average score_time: 0.822 s
+		Average test_r2: 0.914
+		Average train_r2: 0.966
+		Average test_neg_mean_absolute_error: -2963.682
+		Average train_neg_mean_absolute_error: -2436.211
+		Average test_neg_root_mean_squared_error: -5221.360
+		Average train_neg_root_mean_squared_error: -3332.795
+		Average test_neg_mean_absolute_percentage_error: -0.120
+		Average train_neg_mean_absolute_percentage_error: -0.101
+	Total duration: 185.498 s
+
+XGBoost_SimpleImputer(strategy='median'):
+	model: XGBRegressor(base_score=None, booster=None, callbacks=None,
+             colsample_bylevel=None, colsample_bynode=None,
+             colsample_bytree=None, early_stopping_rounds=None,
+             enable_categorical=False, eval_metric=None, feature_types=None,
+             gamma=None, gpu_id=None, grow_policy=None, importance_type=None,
+             interaction_constraints=None, learning_rate=None, max_bin=None,
+             max_cat_threshold=None, max_cat_to_onehot=None,
+             max_delta_step=None, max_depth=None, max_leaves=None,
+             min_child_weight=None, missing=nan, monotone_constraints=None,
+             n_estimators=100, n_jobs=None, num_parallel_tree=None,
+             predictor=None, random_state=0, ...)
+	scores:
+		Average fit_time: 29.241 s
+		Average score_time: 0.929 s
+		Average test_r2: 0.915
+		Average train_r2: 0.966
+		Average test_neg_mean_absolute_error: -2966.084
+		Average train_neg_mean_absolute_error: -2462.175
+		Average test_neg_root_mean_squared_error: -5171.999
+		Average train_neg_root_mean_squared_error: -3374.800
+		Average test_neg_mean_absolute_percentage_error: -0.120
+		Average train_neg_mean_absolute_percentage_error: -0.102
+	Total duration: 183.446 s
+
+duration: 1738.698 s

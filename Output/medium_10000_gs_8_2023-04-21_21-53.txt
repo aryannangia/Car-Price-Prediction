@@ -1,0 +1,77 @@
+sample_size: 10000
+test_size: 0.1
+n_splits: 10
+random_state: 0
+features_selected: ['powerRPM', 'savings_amount', 'torqueRPM', 'pca_fuel_economy_1', 'pca_engine_1', 'pca_car_usage_1', 'avg_car_space', 'franchise_make_encoded_1']
+
+Linear Regression_SimpleImputer():
+	model: LinearRegression()
+	scores:
+		Average fit_time: 2.600 s
+		Average score_time: 0.525 s
+		Average test_r2: 0.495
+		Average train_r2: 0.513
+		Average test_neg_mean_absolute_error: -7402.079
+		Average train_neg_mean_absolute_error: -7161.881
+		Average test_neg_root_mean_squared_error: -13998.396
+		Average train_neg_root_mean_squared_error: -13109.324
+		Average test_neg_mean_absolute_percentage_error: -0.336
+		Average train_neg_mean_absolute_percentage_error: -0.325
+	Total duration: 16.098 s
+
+Decision Tree_SimpleImputer():
+	model: DecisionTreeRegressor(random_state=0)
+	scores:
+		Average fit_time: 2.743 s
+		Average score_time: 0.493 s
+		Average test_r2: 0.716
+		Average train_r2: 0.994
+		Average test_neg_mean_absolute_error: -4886.916
+		Average train_neg_mean_absolute_error: -491.574
+		Average test_neg_root_mean_squared_error: -10344.236
+		Average train_neg_root_mean_squared_error: -1484.267
+		Average test_neg_mean_absolute_percentage_error: -0.194
+		Average train_neg_mean_absolute_percentage_error: -0.015
+	Total duration: 7.988 s
+
+Random Forest_SimpleImputer():
+	model: RandomForestRegressor(n_estimators=50, random_state=0)
+	scores:
+		Average fit_time: 8.114 s
+		Average score_time: 0.491 s
+		Average test_r2: 0.802
+		Average train_r2: 0.961
+		Average test_neg_mean_absolute_error: -3926.966
+		Average train_neg_mean_absolute_error: -1666.861
+		Average test_neg_root_mean_squared_error: -8627.079
+		Average train_neg_root_mean_squared_error: -3705.799
+		Average test_neg_mean_absolute_percentage_error: -0.161
+		Average train_neg_mean_absolute_percentage_error: -0.064
+	Total duration: 12.402 s
+
+XGBoost_SimpleImputer():
+	model: XGBRegressor(base_score=None, booster=None, callbacks=None,
+             colsample_bylevel=None, colsample_bynode=None,
+             colsample_bytree=None, early_stopping_rounds=None,
+             enable_categorical=False, eval_metric=None, feature_types=None,
+             gamma=None, gpu_id=None, grow_policy=None, importance_type=None,
+             interaction_constraints=None, learning_rate=0.15, max_bin=None,
+             max_cat_threshold=None, max_cat_to_onehot=None,
+             max_delta_step=None, max_depth=10, max_leaves=None,
+             min_child_weight=None, missing=nan, monotone_constraints=None,
+             n_estimators=125, n_jobs=None, num_parallel_tree=None,
+             predictor=None, random_state=0, ...)
+	scores:
+		Average fit_time: 7.236 s
+		Average score_time: 0.480 s
+		Average test_r2: 0.842
+		Average train_r2: 0.989
+		Average test_neg_mean_absolute_error: -3638.510
+		Average train_neg_mean_absolute_error: -1280.859
+		Average test_neg_root_mean_squared_error: -7781.248
+		Average train_neg_root_mean_squared_error: -1989.513
+		Average test_neg_mean_absolute_percentage_error: -0.147
+		Average train_neg_mean_absolute_percentage_error: -0.049
+	Total duration: 11.130 s
+
+duration: 47.623 s
